@@ -3,7 +3,8 @@
 Playwright + Python
 
 1. The cross-platform feature of Playwright supports Chromium, Firefox and Webkit, it provides coverage in Chrome, Firefox and Safari browsers.
-2. The built-in auto-waiting feature in Playwright waits for an element to be visible, enabled, and able to receive clicks before making actions to ensure the actions behave as expected. This reduces flaky tests caused by page loading or overlays.
-3. Playwright auomatically downloads pre-configured version on browser, such as Webkit, that are working with the current Playwright version. This allows ease in script maintenance, and redunces the failures created from version mismatches.
+2. The built-in auto-waiting feature in Playwright waits for an element to be visible, enabled, and able to receive clicks before making actions to ensure the actions behave as expected. Since the user journeys in the demo webpage requires dynamic page updates, the auto-waiting feature allows the script to wait for the elements to be actionable before interacting with them. This reduces flaky tests caused by page loading.
+3. Playwright supports screenshots and videos, which allows us to record the failures easier.
 4. Python code is clean and readable, its syntax lets tests read close to manual test case. The straightforward code structure allows faster development and maintenance of the website.
 5. Python code runs seamlessly on different operating systems — Windows, macOS and Linux, which can be applied to a broader range of projects
+
