@@ -1,0 +1,26 @@
+- Out of the six user journeys proceed to pick four journeys to script against and
+explain why you picked these journeys?
+
+
+1. Sign up
+This is a high-traffic user journey. Account creation is the entry point for most of the customers when using the demo webpage. An account is required for a user to proceed to checkout, making a purchase as a guest is unavailable in the demo website. 
+A user must successfully sign up to get value from the product, thus sign up is an essential user journey to different stakeholders — both the customer and business owners. In one hand, it helps customers (users) to complete their goals — purchase. In the other hand, it helps business turning a user who just does browsing into who actually makes revenue.
+
+
+2. Log in
+Logging in feature helps users to store personal information, like name, delivery address, bill address, etc. so that they don’t need to enter the details on every purchase. 
+Also, logging in is the only way to validate user’s identity, to make sure the right access to the protected-pages, such as name, and any other identifiable information. 
+
+
+3. Product discovery
+Product discovery is important on first impression the users think towards the webpage or business.
+Every user needs to browse through the products before making any purchase. Browsing the entire catalogue one by one is undoubtedly inconvenience and time-consuming. A good search engine and category filter allow user to compare similar products, and find the right product to purchase. 
+User who enjoys online shopping normally loves the convenience in product comparison and product search provided by the website. Broken search or invalid filtering brings user inconvenience and makes the catalogue unreliable, as a result of increasing the drop-off in purchase. In contrast, smooth flow of product search definitely adds value to the user’s satisfaction.
+
+
+4. Complete an order
+A successful payment drives revenue, converts causal viewer into customer who made payments. Also, the payment process involves many technical integrations, like the handling of sensitive information, safe payment gateway, security protocols, fraud prevention.
+Payment may also work with 3rd party service provider, which could be risky when the provider or APIs failed. Therefore, we need repetitive testing to ensure no regression issue happens and verify the status of the 3rd party provider or payment network.
+
+
+
