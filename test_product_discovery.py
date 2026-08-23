@@ -4,7 +4,7 @@ from playwright.sync_api import Page, expect
 
 
 def open_products_page(page: Page) -> None:
-    """Open Products and close the optional cookie banner if it appears."""
+    # Open Products page and close the cookie consent when appears."""
     page.goto("https://automationexercise.com/products")
 
     consent_button = page.get_by_role("button", name="Consent")
