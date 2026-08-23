@@ -1,0 +1,62 @@
+- Can you review the website and pick six most important user journeys from the
+site?
+
+# Sign up / Create new user acount
+1. Click `Signup / Login` on the navigation bar
+2. Fill in `Name` and `Email Address` fields > Click `Signup` button
+   > make sure invalid email address format or invalid names are unable to proceed
+3. Enter all the account and address information
+   > make sure the process can't be proceeded when any required field is missing 
+4. Click `Create Account` button
+5. Verify account is created and is logged in
+
+
+# Login
+1. Click `Signup / Login` on the navigation bar
+2. Enter `Email Address` and `Password` > Click `Login` button
+3. Verify the account is logged in
+
+
+# Product discovery
+1. Go to `Home` or `Products` page
+<By cateogy filter>
+2a. Category section > Click on each category > Click on each subcategory > Verify the products appeared match with the category filter
+<By brand filter>
+2b. Brand sections > Click on each brand > Verify the products appeared match the brand filter and the product count matches as well
+<By search keywords>
+2c. Enter search keywords in search bar > Click magnigier button to procees > Verify the products being filtered are contextual 
+    Enter meaningless input in search bar > Verify no products should show up
+3. Click `+ View Product` button on each product thumbnail > Verify product details are shown
+
+
+# Complete an order
+1. Log in > browse through the product page
+2a. Move cursor to the image of the product thumbnail > Click `Add to cart` button to add product to the cart
+2b. Click `+ View Product` button on any product thumbnail > Set the required quantity > Click `Add to cart` button
+    Make sure invalid quantity, e.g. decimal, negative value, zero, is not allowed to proceed
+3. Click `Continue Shopping` on the prompt > Add all products desired to the cart
+4. Click `View cart` on the prompt > you should be redirected to the cart page
+5. Check the items added > Click `Proceed To Checkout`
+6. Verify Delivery Address and Billing Address are correct
+7. Review the order and scroll down > click `Place Order` 
+8. Enter card details > Make sure missing fields are not allowed to proceed > Verify invalid input of any field is not allowed to proceed
+9. Click `Pay and Confirm Order` > Verify the order is placed successfully
+
+
+# Cart Management
+1. Have some products added to the cart
+2. Click `Cart` on the navigation bar > Check the item added and quantity match with your choice
+3. Click on the number in Quantity column > Verify you can modify the quantity
+4. Verify you can remove item from the cart by clicking the X button at the end of the row
+5. Verify the amount in Price and Total columns matches with that on product page
+
+
+# Guest-to-account checkout path
+1. Don't sign up/log in yet
+2. Go to Product page > Add some products to the cart > View Cart
+3. Click `Proceed To Checkout` button > Click `Register / Login` on the prompt
+4. Enter your account information > Login
+5. Verify you are returned to the checkout page 
+6. Verify the content in the cart are preserved 
+7. Continue the checkout process > Make sure the order can be placed
+
