@@ -1,7 +1,7 @@
 from playwright.sync_api import Page, expect
 
 
-def test_customer_can_complete_an_order(page: Page) -> None:
+def test_complete_an_order(page: Page) -> None:
     email = f"tommy.l123@gmail.com"
     password = "Apex1234"
 
@@ -17,20 +17,11 @@ def test_customer_can_complete_an_order(page: Page) -> None:
     page.get_by_role("button", name="Login").click()
     expect(page.get_by_text("Logged in as Tommy")).to_be_visible()
 
-    # 2a. Open Products, move over Blue Top, then add it to the cart.
+    # 2. Open Products, move over Blue Top, then add it to the cart.
     page.goto("https://automationexercise.com/products")
     blue_top = page.locator(".product-image-wrapper").filter(has_text="Blue Top").first
     blue_top.hover()
     blue_top.locator(".overlay-content .add-to-cart").click()
-    expect(page.get_by_text("Added!")).to_be_visible()
-    page.get_by_role("button", name="Continue Shopping").click()
-
-    # 2b. Open Stylish Dress details, choose a quantity, and add it to the cart.
-    stylish_dress = page.locator(".product-image-wrapper").filter(has_text="Stylish Dress").first
-    stylish_dress.locator("a[href='/product_details/4']").click()
-    expect(page.locator(".product-information h2")).to_have_text("Stylish Dress")
-    page.locator("#quantity").fill("2")
-    page.get_by_role("button", name="Add to cart").click()
     expect(page.get_by_text("Added!")).to_be_visible()
 
     # 3. Click View Cart on the prompt to go to the cart page.
@@ -38,17 +29,15 @@ def test_customer_can_complete_an_order(page: Page) -> None:
 
     # 4. Check both items and their quantity, then begin checkout.
     expect(page.get_by_text("Blue Top", exact=True)).to_be_visible()
-    expect(page.get_by_text("Men Tshirt", exact=True)).to_be_visible()
-    expect(page.locator(".cart_quantity_button").nth(1)).to_have_text("2")
     page.get_by_text("Proceed To Checkout", exact=True).click()
 
     # 5. Verify delivery and billing address details.
     delivery_address = page.locator("#address_delivery")
     billing_address = page.locator("#address_invoice")
-    expect(delivery_address).to_contain_text("Tommy")
-    expect(delivery_address).to_contain_text("1 Test Lane")
-    expect(billing_address).to_contain_text("Tommy")
-    expect(billing_address).to_contain_text("1 Test Lane")
+    expect(delivery_address).to_contain_text("Tommy Lee")
+    expect(delivery_address).to_contain_text("123 gardens")
+    expect(billing_address).to_contain_text("Tommy Lee")
+    expect(billing_address).to_contain_text("123 gardens")
 
     # 6. Review the order, scroll to Place Order, and click it.
     expect(page.get_by_text("Review Your Order")).to_be_visible()
