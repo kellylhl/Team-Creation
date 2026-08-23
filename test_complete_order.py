@@ -27,7 +27,7 @@ def test_complete_an_order(page: Page) -> None:
     # 3. Click View Cart on the prompt to go to the cart page.
     page.get_by_role("link", name="View Cart").click()
 
-    # 4. Check both items and their quantity, then begin checkout.
+    # 4. Check item and quantity, then begin checkout.
     expect(page.get_by_text("Blue Top", exact=True)).to_be_visible()
     page.get_by_text("Proceed To Checkout", exact=True).click()
 
